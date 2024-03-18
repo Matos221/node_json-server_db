@@ -1,0 +1,80 @@
+{
+        "profesores": [
+                {
+                        "nombre": "Marcos",
+                        "apellido": "Devs",
+                        "materias": [
+                                {
+                                        "nombre": "NodeJs desde cero"
+                                },
+                                {
+                                        "nombre": "ReactJS desde cero"
+                                },
+                                {
+                                        "nombre": "JS desde cero"
+                                }
+                        ],
+                        "id": "e947"
+                },
+                {
+                        "nombre": "Sergie",
+                        "apellido": "Code",
+                        "materias": [
+                                {
+                                        "nombre": "Angular desde cero"
+                                },
+                                {
+                                        "nombre": "HTML desde cero"
+                                },
+                                {
+                                        "nombre": "CSS desde cero"
+                                }
+                        ],
+                        "id": "036c"
+                },
+                {
+                        "id": "d9e0",
+                        "query": "\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  "
+                }
+        ],
+        "alumnos": [
+                {
+                        "nombre": "Juan",
+                        "apellido": "Lombo",
+                        "promedio": 9.2,
+                        "id": "f90d"
+                },
+                {
+                        "nombre": "Laura",
+                        "apellido": "Storni",
+                        "promedio": 10,
+                        "id": "a9a7"
+                },
+                {
+                        "id": "2a32",
+                        "nombre": "Goerge",
+                        "apellido": "Orwel",
+                        "promedio": 10
+                }
+        ],
+        "cursos": [
+                {
+                        "nombre": "JS desde cero",
+                        "duracion": 7,
+                        "dificultad": "media",
+                        "id": "38c8"
+                },
+                {
+                        "nombre": "ReactJS desde cero",
+                        "duracion": 8,
+                        "dificultad": "media",
+                        "id": "3519"
+                },
+                {
+                        "nombre": "NodeJs desde cero",
+                        "duracion": 7,
+                        "dificultad": "alta",
+                        "id": "beaa"
+                }
+        ]
+}
